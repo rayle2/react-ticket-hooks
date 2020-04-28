@@ -72,7 +72,7 @@
       "react-hooks"
     ],
     "rules": {
-      "react-hooks/rules-of-hooks": "err"
+      "react-hooks/rules-of-hooks": "error"
     }
   },
   "browserslist": {

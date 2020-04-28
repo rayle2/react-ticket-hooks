@@ -1,4 +1,4 @@
-import React, { Component, useState, useMemo, memo } from "react";
+import React, { Component, useState, useMemo, memo, useCallback } from "react";
 
 
 const Counter = memo(function Counter(props) {
@@ -10,16 +10,32 @@ const Counter = memo(function Counter(props) {
 
 function App4(props) {
     const [count, setCount] = useState(0);
+    const [clickCount, setClickCount] = useState(0);
 
     const double = useMemo(() => {
         return count * 2;
     }, [count === 3]);
 
-    const onClick = useMemo(() => {
-        return () => {
-            console.log('click');
-        };
-    },[]);
+    // const onClick = useMemo(() => {
+    //     return () => {
+    //         console.log('click');
+    //     };
+    // }, []);
+
+    // useMemo(() => fn)
+    // useCallback(fn)
+    // 等价
+
+    const onClick = useCallback(() => {
+        console.log('click');
+        setClickCount(clickCount + 1); // 还可以写成下面
+    }, [clickCount]);
+
+    // const onClick = useCallback(() => {
+    //     console.log('click');
+    //     setClickCount(clickCount => clickCount + 1);
+    // }, []);
+
 
     return (
         <div>

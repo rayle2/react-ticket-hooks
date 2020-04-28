@@ -5,7 +5,7 @@ import './index.css';
 // import Lazy from './Lazy';
 // import Memo from "./Memo";
 // import UseState from "./UseState";
-import App4 from './UseMemo';
+import App5 from './UseRef';
 
 ReactDOM.render(
     // <React.StrictMode>
@@ -18,7 +18,7 @@ ReactDOM.render(
         {/*<Lazy />*/}
         {/*<Memo />*/}
         {/*<UseState />*/}
-        <App4 />
+        <App5 />
     </Fragment>,
     document.getElementById('root')
 );
