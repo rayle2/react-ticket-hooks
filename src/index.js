@@ -5,7 +5,8 @@ import './index.css';
 // import Lazy from './Lazy';
 // import Memo from "./Memo";
 // import UseState from "./UseState";
-import App5 from './UseRef';
+import App4 from './UseMemo';
+// import TodoList from './TodoListApp-redux';
 
 ReactDOM.render(
     // <React.StrictMode>
@@ -18,7 +19,8 @@ ReactDOM.render(
         {/*<Lazy />*/}
         {/*<Memo />*/}
         {/*<UseState />*/}
-        <App5 />
+        <App4 />
+        {/*<TodoList />*/}
     </Fragment>,
     document.getElementById('root')
 );
